@@ -1,5 +1,4 @@
 
-
 {% extends 'base.html'%}
 {% import "bootstrap/wtf.html" as wtf %}
 
@@ -12,7 +11,7 @@
         {% if title %}
         <title> {{ title }}</title>
         {% else %}
-        <title> Welcome to the best pitches  website </title>
+        <title> Welcome to the best blogs  website </title>
         {% endif %}
         
 
@@ -24,21 +23,23 @@
         {% endblock %}
         
     </head>
-  
-
 {% block content %}
-    <div class="container">
+ <div class="container">
 
-        <div class="col-md-8">
+  <div>
 
-           
-        </div>
+    {{ wtf.quick_form(comment_form) }}
+   </div>
+    
+   <div class="well-lg">
+     {%for word in comments%}
+     <p>{{word.comment}}</p>
+     <button><a href="/comment/delete/">Delete comment</a></button>
+     {%endfor%}
+     
+ </div>
+{% endblock%}
 
-        <div class="col-md-4">
 
-            {{ wtf.quick_form(Blog_form) }}
-        </div>
-        
-    </div>
 
-{% endblock %}
+
