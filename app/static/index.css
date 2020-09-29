@@ -1,3 +1,8 @@
+
+body{
+    background-color:gainsboro;
+}
+
 h1{
     color:red;
     margin-bottom: 100px;
@@ -24,7 +29,4 @@ ul{
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;  
-}
-body{
-    background-color:#A9E5BB;
 }
